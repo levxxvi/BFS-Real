@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Module3.3Graphs.iml" filepath="$PROJECT_DIR$/Module3.3Graphs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BFS Real.iml" filepath="$PROJECT_DIR$/BFS Real.iml" />
     </modules>
   </component>
 </project>

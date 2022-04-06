@@ -5,8 +5,6 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-
-
 public class Main {
     public static ArrayList<Node> graph;
     public static void main(String[] args) throws FileNotFoundException {
@@ -18,7 +16,12 @@ public class Main {
     private static void BFS() {
         //Your code here.  Feel free to modify signature or add helper functions.
         /*
-        check first node in arraylist
+        arraylist for
+        for loop for array.size
+            start with node 1
+            for # of points in node (loop)
+                if loop (check if point is visited )
+
 
          */
     }
