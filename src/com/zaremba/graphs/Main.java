@@ -24,7 +24,8 @@ public class Main {
             setVisited(true) (set node 1 as visited)
          */
         ArrayList<Integer> queue = new ArrayList<>();
-        //for loop needs to check nodes according to the queue
+        //for loop needs to check nodes according to the queue. NOT queue.size
+        //int keyIndex is
         for(int i = 0; i < graph.size(); i++){
             int keyIndex = graph.get(i).getKey();
             System.out.println("keyIndex " + keyIndex);
@@ -40,10 +41,10 @@ public class Main {
                     queue.add(checkNode);
                 }
             }
-            
+
             System.out.println("queue " + queue);
             System.out.println("\n");
-            //keyIndex = setVisited(true) (?)
+            //keyIndex = setVisited(true); (?)
         }
     }
 
