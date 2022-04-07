@@ -16,9 +16,8 @@ public class Main {
     private static void BFS() {
         //Your code here.  Feel free to modify signature or add helper functions.
         /*
-        arraylist for
         for loop for array.size
-            start with node 1
+            start with node 1 (getKey())
             for # of points in node (loop)
                 if loop (check if point is visited )
 
