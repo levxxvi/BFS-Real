@@ -10,19 +10,40 @@ public class Main {
     public static void main(String[] args) throws FileNotFoundException {
         setupTree();
         System.out.println(graph);
-        //BFS();
+        BFS();
     }
 
     private static void BFS() {
         //Your code here.  Feel free to modify signature or add helper functions.
         /*
-        for loop for array.size
-            start with node 1 (getKey())
-            for # of points in node (loop)
-                if loop (check if point is visited )
-
-
+        for loop: for i < array.size
+            start with node 1 (getKey(i))
+            for loop: for i < # of points in node (getNodes())
+                if loop (check if point is visited - isVisited(getNodes(i)) = false (?) )
+                    add node to queue
+            setVisited(true) (set node 1 as visited)
          */
+        ArrayList<Integer> queue = new ArrayList<>();
+        for(int i = 0; i < graph.size(); i++){
+            int keyIndex = graph.get(i).getKey();
+            System.out.println("keyIndex " + keyIndex);
+
+            ArrayList<Integer> connectedNodes = (ArrayList<Integer>) graph.get(i).getNodes();
+            System.out.println("connectedNodes " + connectedNodes);
+
+            for(int j = 0; j < connectedNodes.size(); j++){
+                int checkNode = connectedNodes.get(j);
+                System.out.println("checkNode " + checkNode);
+
+                //might have to change the if statement -> if isVisited is false
+                if (!queue.contains(checkNode)){
+                    queue.add(checkNode);
+                }
+            }
+            System.out.println("queue " + queue);
+            System.out.println("\n");
+            //keyIndex = setVisited(true) (?)
+        }
     }
 
     private static void setupTree() throws FileNotFoundException {
