@@ -9,7 +9,7 @@ public class Main {
     public static ArrayList<Node> graph;
     public static void main(String[] args) throws FileNotFoundException {
         setupTree();
-        System.out.println(graph);
+        System.out.println(graph + "\n");
         BFS();
     }
 
@@ -25,13 +25,11 @@ public class Main {
          */
 
         ArrayList<Integer> queue = new ArrayList<>();
-        //for loop needs to check nodes according to the queue. NOT queue.size
-        //int keyIndex is
+        //for loop needs to check nodes according to the queue
         queue.add(1);
 
         for(int i = 0; i < queue.size(); i++){
             int numHold = queue.get(i) - 1;
-            System.out.println("queue.get(i): " + numHold);
 
             int keyIndex = graph.get(numHold).getKey();
             System.out.println("keyIndex " + keyIndex);
@@ -41,7 +39,6 @@ public class Main {
 
             for(int j = 0; j < connectedNodes.size(); j++){
                 int checkNode = connectedNodes.get(j);
-                System.out.println("checkNode " + checkNode);
 
                 if (!queue.contains(checkNode)){
                     queue.add(checkNode);
@@ -50,7 +47,6 @@ public class Main {
 
             System.out.println("queue " + queue);
             System.out.println("\n");
-            //keyIndex = setVisited(true); (?)
         }
     }
 
