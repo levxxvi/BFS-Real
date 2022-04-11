@@ -23,14 +23,20 @@ public class Main {
                     add node to queue
             setVisited(true) (set node 1 as visited)
          */
+
         ArrayList<Integer> queue = new ArrayList<>();
         //for loop needs to check nodes according to the queue. NOT queue.size
         //int keyIndex is
-        for(int i = 0; i < graph.size(); i++){
-            int keyIndex = graph.get(i).getKey();
+        queue.add(1);
+
+        for(int i = 0; i < queue.size(); i++){
+            int numHold = queue.get(i) - 1;
+            System.out.println("queue.get(i): " + numHold);
+
+            int keyIndex = graph.get(numHold).getKey();
             System.out.println("keyIndex " + keyIndex);
 
-            ArrayList<Integer> connectedNodes = (ArrayList<Integer>) graph.get(i).getNodes();
+            ArrayList<Integer> connectedNodes = (ArrayList<Integer>) graph.get(numHold).getNodes();
             System.out.println("connectedNodes " + connectedNodes);
 
             for(int j = 0; j < connectedNodes.size(); j++){
